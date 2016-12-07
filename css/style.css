@@ -26,7 +26,7 @@
 body {
   /* https://en.wikipedia.org/wiki/Palatino#/media/File:Palatino_%26_Aldus.png */
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  font-size: 14px; /* Larger is better for readability */
+  font-size: 18px; /* Larger is better for readability */
   font-weight: 500;
   color: var(--color-gray-dark);
 
