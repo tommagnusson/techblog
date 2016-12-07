@@ -1,0 +1,40 @@
+/* Site-wide style for the tech blog */
+
+/* Setting up global variables, change all in one place here.
+   I can use `var(--variable-name)` to use the variable */
+
+:root {
+
+  /* Colors */
+
+  /* Google's Material Design Green */
+  --color-primary: #4CAF50;
+    --color-primary-dark: #1B5E20;
+    --color-primary-light: #C8E6C9;
+
+  /* Google's Material Design Amber */
+  --color-highlight: #FFC107;
+    --color-highlight-dark: #C8E6C9;
+    --color-highlight-light: #FFECB3;
+
+  /* Google's Material Design Gray */
+  --color-gray: #9E9E9E;
+    --color-gray-dark: #424242;
+    --color-gray-light: #E0E0E0;
+}
+
+body {
+  /* https://en.wikipedia.org/wiki/Palatino#/media/File:Palatino_%26_Aldus.png */
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 14px; /* Larger is better for readability */
+  font-weight: 500;
+  color: var(--color-gray-dark);
+
+  background-color: var(--color-gray-light);
+
+}
+/* Probably only going to use down to h3 */
+h1, h2, h3 {
+  font-family: Tahoma, Geneva, sans-serif;
+  color: var(--color-gray-dark);
+}
