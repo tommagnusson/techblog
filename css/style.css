@@ -33,8 +33,20 @@ body {
   background-color: var(--color-gray-light);
 
 }
+
 /* Probably only going to use down to h3 */
 h1, h2, h3 {
   font-family: Tahoma, Geneva, sans-serif;
   color: var(--color-gray-dark);
+}
+
+.gradient-green {
+  background: linear-gradient(#1B5E20, #2E7D32);
+  color: white;
+}
+
+.gradient-green .detail-text {
+  color: var(--color-primary-light);
+  font-size: 1.5em;
+  margin-right: 300px;
 }

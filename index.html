@@ -17,20 +17,62 @@
   </head>
 
   <body>
-    <div class="jumbotron">
-      <div class="containter">
+    <!-- Start Nav Bar
+         Static Nav Bar at the top -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Header contains the link to the main page -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">techBlog</a>
+        </div>
+        <!-- Collapses on mobile into a nice hamburger menu -->
+        <div id="navbar" class="navbar-collapse collapse in">
+
+          <!-- Right nav bar elements -->
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">About Me</a>
+            </li>
+          </ul>
+
+        </div> <!-- End id navbar -->
+      </div> <!-- End navbar container wrapper -->
+    </nav>
+    <!-- End Nav Bar -->
+
+    <!-- "jumbotron" is a nice attention grabber -->
+    <
+    <div class="jumbotron gradient-green">
+      <div class="container">
         <h1>Tom's Tech Blog</h1>
+        <p class="detail-text">Tech ramblings, interesting reads, problem solving at its finest,
+          and a sprinkling of philosophy.</p>
       </div>
     </div>
-    <!-- Containter-fluid allows the grid system to run across the screen
-    without annoying margins -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4">
-          <p>Hello back</p>
+
+    <!-- "container" makes auto margins based on the size of the viewport -->
+    <div class="container">
+
+      <!-- Containter-fluid allows the grid system to run across the screen
+      without annoying margins -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Introducing the latest tech trends</h1>
+            <!-- Place for technology articles I've written -->
+            <h1>Some thought required...</h1>
+            <!-- Place for philosophy articles -->
+            <h1>Sometimes I meander from my mission</h1>
+            <!-- Place for random other articles, would be misc -->
+          </div>
         </div>
       </div>
-    </div>
+
+    </div> <!-- End container wrapper for all main content -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
 
   </body>
 
