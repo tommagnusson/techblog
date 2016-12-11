@@ -34,10 +34,16 @@ body {
 
 }
 
+
 /* Probably only going to use down to h3 */
 h1, h2, h3 {
   font-family: Tahoma, Geneva, sans-serif;
   color: var(--color-gray-dark);
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--color-gray);
 }
 
 .gradient-green {
@@ -48,5 +54,35 @@ h1, h2, h3 {
 .gradient-green .detail-text {
   color: var(--color-primary-light);
   font-size: 1.5em;
-  margin-right: 300px;
+  margin-right: 350px;
+}
+
+/* Spacing for article cards */
+.article-deck {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Inspiration: http://www.w3schools.com/howto/howto_css_cards.asp */
+/* Card shaped thumbnail for an article */
+.article-card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* Padding for the card's content */
+.article-card .card-content {
+  padding: 10px 20px 40px 20px;
+}
+
+.card-content h1 {
+  margin-bottom: 10px;
+}
+.card-content a:hover {
+  text-decoration: none;
+}
+
+.article-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }

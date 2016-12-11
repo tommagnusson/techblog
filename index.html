@@ -44,35 +44,76 @@
     <
     <div class="jumbotron gradient-green">
       <div class="container">
-        <h1>Tom's Tech Blog</h1>
-        <p class="detail-text">Tech ramblings, interesting reads, problem solving at its finest,
-          and a sprinkling of philosophy.</p>
+        <div class="row">
+          <h1>Tom's Tech Blog</h1>
+          <p class="detail-text">Tech ramblings, interesting reads, problem solving at its finest,
+            and a sprinkling of philosophy.</p>
+        </div>
       </div>
     </div>
 
     <!-- "container" makes auto margins based on the size of the viewport -->
     <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1>Introducing the latest tech trends</h1>
+          <!-- Place for technology articles I've written -->
+          <div class="container article-deck">
+            <div class="row deck-row">
 
-      <!-- Containter-fluid allows the grid system to run across the screen
-      without annoying margins -->
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Introducing the latest tech trends</h1>
-            <!-- Place for technology articles I've written -->
-            <h1>Some thought required...</h1>
-            <!-- Place for philosophy articles -->
-            <h1>Sometimes I meander from my mission</h1>
-            <!-- Place for random other articles, would be misc -->
+              <!-- Ideally these cards will be auto generated from the server -->
+              <div class="col-md-4">
+                <div class="article-card">
+                  <img src="./img/macbook.jpg"
+                       alt="forestry"
+                       class="img-responsive">
+                  </img>
+                  <div class="card-content">
+                    <h1>One Crazy Flaw with Macbooks...</h1>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Filler div -->
+              <!--<div class="col-md-1"></div>-->
+
+              <!-- Another hopefully auto generated article card teaser thing -->
+              <div class="col-md-4">
+
+                <div class="article-card">
+                  <a href="#">
+                  <img src="./img/urbanization.jpg"
+                       alt="urbanization"
+                       class="img-responsive">
+                  </img>
+                  <div class="card-content">
+                    <h1>How Urbanization Is Changing the Way We Look at Cities</h1>
+                    <p class="teaser-text">Traditional cities are looking more and more like fact...</p>
+                  </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
           </div>
+          <h1>Some thought required...</h1>
+          <!-- Place for philosophy articles -->
+          <h1>Sometimes I meander from my mission</h1>
+          <!-- Place for random other articles, would be misc -->
         </div>
-      </div>
 
+        <!-- Nav bar spot -->
+        <div class="col-md-3">
+        </div>
+      </div> <!-- End row -->
     </div> <!-- End container wrapper for all main content -->
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./js/bootstrap.min.js"></script>
+    <!-- Helps with the card insertion -->
+    <script src="./js/card.js"></script>
 
   </body>
 
