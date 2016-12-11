@@ -1,13 +1,21 @@
 'use strict';
 
+// for named label parameters, following google maps api
+// design patters (I think)
+//class ArticleTeaserInfo {
+//  title, teaserText, imgUrl, imgAlt, articleLink
+//}
+
+/** Represents a Teaser for an Article (info used for the card) */
 class ArticleTeaser {
 
-  constructor(title, teaserText, imgUrl, imgAlt, articleLink) {
-    this.title = title;
-    this.teaserText = teaserText;
-    this.imgUrl = imgUrl;
-    this.imgAlt = imgAlt;
-    this.articleLink = articleLink;
+  constructor(articleTeaserInfo) {
+
+    this.title = articleTeaserInfo.title;
+    this.teaserText = articleTeaserInfo.teaserText;
+    this.imgUrl = articleTeaserInfo.imgUrl;
+    this.imgAlt = articleTeaserInfo.imgAlt;
+    this.articleLink = articleTeaserInfo.articleLink;
   }
 
   /** Returns and html element representing a card */
@@ -51,16 +59,28 @@ class ArticleTeaser {
 }
 
 // Called when the document is loaded, courtesy of jQuery
-$(document).ready(() => {
+$(() => {
 
-  // TODO make nice settings object for ArticleTeaser (named parameters)
-  let teaser = new ArticleTeaser(
-    "How Macbooks Came to Be",
-    "Allow me to start at the beginnig, when Steve Jobs was just a wee infant...",
-    "./img/macbook.jpg",
-    "macbook",
-    "#"
-   );
-   alert(teaser);
-  $(".deck-row").append(teaser.makeCard());
+  // In the future this would contain a web call to retreive a bunch of teasers,
+  // then load those teasers onto the page dynamically using these objects
+
+  let macbookTeaser = new ArticleTeaser({
+    title: "How Macbooks Came to Be",
+    teaserText: "Allow me to start at the beginnig, when Steve Jobs was just a wee infant...",
+    imgUrl: "./img/macbook.jpg",
+    imgAlt: "macbook",
+    articleLink: "#"
+   });
+  let deck = $(".deck-row")
+  deck.append(macbookTeaser.makeCard());
+
+  let urbanizationTeaser = new ArticleTeaser({
+    title: "How Urbanization Is Changing the Way We Look at Cities",
+    teaserText: "Traditional cities are looking more and more like fact..",
+    imgUrl: "./img/urbanization.jpg",
+    imgAlt: "urbanization",
+    articleLink: "#"
+  });
+  deck.append(urbanizationTeaser.makeCard());
+
 });
