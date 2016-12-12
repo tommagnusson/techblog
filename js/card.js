@@ -33,8 +33,8 @@ class ArticleTeaser {
 
     var img = $("<img></img>");
     img.addClass("img-responsive");
-    img.attr("src", this.imgUrl);
     img.attr("alt", this.imgAlt);
+    img.attr("src", this.imgUrl);
 
     var content = $("<div></div>");
     content.addClass("card-content");

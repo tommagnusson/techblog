@@ -80,6 +80,11 @@ a:visited {
   padding: 10px 20px 40px 20px;
 }
 
+.article-card img {
+  object-fit: cover;
+  overflow: hidden;
+}
+
 .card-content h1 {
   margin-bottom: 10px;
 }
