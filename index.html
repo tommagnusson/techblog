@@ -53,27 +53,35 @@
     </div>
 
     <!-- "container" makes auto margins based on the size of the viewport -->
-    <div class="container">
+    <div class="container tech-container">
       <div class="row">
         <h1>Introducing the latest tech trends</h1>
         <!-- Place for technology articles I've written -->
-        <div class="container">
-          <div class="row article-decks">
-            <!-- card.js inserts cards here based on teaser objects -->
+        <div class="container article-decks">
+          <!-- card.js inserts cards here based on teaser objects -->
+        </div>
+      </div>
+    </div> <!-- End container wrapper for all main content -->
+
+    <div class="container-fluid philosophy-container">
+      <div class="container">
+        <div class="row">
+          <h1>Some thought required...</h1>
+          <!-- Place for philosophy articles -->
+          <div class="container article-decks">
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="row">
-        <h1>Some thought required...</h1>
-        <!-- Place for philosophy articles -->
+    <div class="container-fluid misc-container">
+      <div class="container">
+        <div class="row">
+          <h1>Sometimes I meander from my mission</h1>
+          <!-- Place for random other articles, would be misc -->
+        </div> <!-- End row -->
       </div>
-
-      <div class="row">
-        <h1>Sometimes I meander from my mission</h1>
-        <!-- Place for random other articles, would be misc -->
-      </div> <!-- End row -->
-    </div> <!-- End container wrapper for all main content -->
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

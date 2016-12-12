@@ -60,19 +60,21 @@ class ArticleTeaser {
 
 // TODO: Somehow not displaying the actual decks... debug more
 
-function placeDecks(teasers) {
+function placeDecks(teasers, section) {
   // place for the decks
-  let deckSpot = $(".article-decks"); // spot on the html to insert the decks
+  let deckSpot = $(section).find(".article-decks");
   var currentDeck = []; // holds the current deck of cards (two for now)
 
   for(let i = 0; i < teasers.length; i++) {
     currentDeck.push(teasers[i]);
-    if (i % 2 != 0 || i +1 == teasers.length) {
+
+    // if the deck is filled (even number) or it's the last card of them all...
+    if (i % 2 != 0 || i + 1 == teasers.length) {
       // create a new deck element
       let deckElement = $("<div></div>");
       deckElement.addClass("row");
       deckElement.addClass("deck-row");
-      
+
       deckElement.append(currentDeck.map(c => { return c.makeCard(); })) // connect the deck with the row
       deckSpot.append(deckElement); // connect the deck with the spot
       currentDeck = []; // evacuate currentDeck
@@ -89,7 +91,7 @@ $(() => {
 
   let macbookTeaser = new ArticleTeaser({
     title: "How Macbooks Came to Be",
-    teaserText: "Allow me to start at the beginnig, when Steve Jobs was just a wee infant...",
+    teaserText: "Allow me to start at the beginning, when Steve Jobs was just a wee infant...",
     imgUrl: "./img/macbook.jpg",
     imgAlt: "macbook",
     articleLink: "#"
@@ -97,7 +99,7 @@ $(() => {
 
   let urbanizationTeaser = new ArticleTeaser({
     title: "How Urbanization Is Changing the Way We Look at Cities",
-    teaserText: "Traditional cities are looking more and more like fact..",
+    teaserText: "Urbanization can be a scary word. Take a look at some amazing new evidence that points to...",
     imgUrl: "./img/urbanization.jpg",
     imgAlt: "urbanization",
     articleLink: "#"
@@ -109,8 +111,27 @@ $(() => {
     imgUrl: "./img/watch.jpg",
     imgAlt: "watch mania",
     articleLink: "#"
-  })
+  });
 
-  let teasers = [macbookTeaser, urbanizationTeaser, watchMania];
-  placeDecks(teasers);
+  let droneZone = new ArticleTeaser({
+    title: "Drone Zones May Mean Big Changes to Your Backyard Airspace",
+    teaserText: "Drone usage has tripled in the past three years, and one judge thinks that this increase has significantly...",
+    imgUrl: "./img/drone.jpg",
+    imgAlt: "drone zone",
+    articleLink: "#"
+  });
+
+  let teasers = [macbookTeaser, urbanizationTeaser, watchMania, droneZone];
+  placeDecks(teasers, ".tech-container");
+
+  let platoTeaser = new ArticleTeaser({
+    title: "Plato's Reflections on the Beauty of the Earth",
+    teaserText: "This wise man had some real insight into the beauty of the earth...",
+    imgUrl: "./img/reflection.jpg",
+    imgAlt: "reflection",
+    articleLink: "#"
+  });
+
+  placeDecks([platoTeaser], ".philosophy-container");
+
 });

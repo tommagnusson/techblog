@@ -63,6 +63,10 @@ a:visited {
   margin-bottom: 10px;
 }
 
+.deck-row {
+  margin: 20px 10px 20px 10px;
+}
+
 /* Inspiration: http://www.w3schools.com/howto/howto_css_cards.asp */
 /* Card shaped thumbnail for an article */
 .article-card {
