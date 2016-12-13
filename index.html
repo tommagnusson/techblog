@@ -43,47 +43,87 @@
     <!-- "jumbotron" is a nice attention grabber -->
     <
     <div class="jumbotron gradient-green">
-      <div class="container">
-        <div class="row">
-          <h1>Tom's Tech Blog</h1>
-          <p class="detail-text">Tech ramblings, interesting reads, problem solving at its finest,
-            and a sprinkling of philosophy.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- "container" makes auto margins based on the size of the viewport -->
-    <div class="container tech-container">
-      <div class="row">
-        <h1>Introducing the latest tech trends</h1>
-        <!-- Place for technology articles I've written -->
-        <div class="container article-decks">
-          <!-- card.js inserts cards here based on teaser objects -->
-        </div>
-      </div>
-    </div> <!-- End container wrapper for all main content -->
-
-    <div class="container-fluid philosophy-container">
-      <div class="container">
-        <div class="row">
-          <h1 class="white-title">Some thought required...</h1>
-          <!-- Place for philosophy articles -->
-          <div class="container article-decks">
+          <div class="container">
+            <div class="row">
+              <h1>Tom's Tech Blog</h1>
+              <p class="detail-text">Tech ramblings, interesting reads, problem solving at its finest,
+                and a sprinkling of philosophy.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="container-fluid misc-container">
-      <div class="container">
-        <div class="row">
-          <h1>Sometimes I meander from my mission</h1>
-          <!-- Place for random other articles, would be misc -->
-          <div class="container article-decks">
-          </div>
-        </div> <!-- End row -->
-      </div>
-    </div>
+        <!-- ======== Actual Content ======== -->
+
+        <!-- "container" makes auto margins based on the size of the viewport -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+
+              <!-- Main cards and content -->
+              <div class="tech-container">
+                <div class="row">
+                    <h1>Introducing the latest tech trends</h1>
+                    <!-- Place for technology articles I've written -->
+                    <!-- card.js inserts cards here based on teaser objects -->
+                    <div class="article-decks"></div>
+                </div>
+              </div> <!-- End container wrapper for all main content -->
+
+              <div class="container-fluid philosophy-container">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <h1 class="white-title">Some thought required...</h1>
+                      <!-- Place for philosophy articles -->
+                      <div class="container article-decks"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-fluid misc-container">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <h1>Sometimes I meander from my mission</h1>
+                      <!-- Place for random other articles, would be misc -->
+                      <div class="container article-decks"></div>
+                    </div>
+                  </div> <!-- End row -->
+                </div>
+              </div>
+
+
+            </div> <!-- End main section column (with content) -->
+            <div class="col-md-1"></div> <!-- Filler column -->
+            <div class="col-md-3">
+              <nav>
+                <!-- Nice little cards that lift up when you can click on them -->
+                <h1>Useful Links</h1>
+                <ul class="nav useful-links">
+                  <li class="link-card">
+                    <a href="https://www.youtube.com/watch?v=KkMDCCdjyW8">
+                      <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+                      Stanford's CS 106a
+                    </a>
+                  </li>
+                  <li class="link-card">
+                    <a href="https://cs50.harvard.edu/">
+                      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                      Harvard's CS 50
+                    </a>
+                  </li>
+                  <li class="link-card">
+                    <a href="https://www.reddit.com/r/swift/">
+                      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                      Reddit Swift Subreddit
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div><!-- End main cards and content row -->
+      </div><!-- End main content div container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

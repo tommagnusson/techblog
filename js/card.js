@@ -23,7 +23,7 @@ class ArticleTeaser {
 
     // create all the elements with jQuery
     var col = $("<div></div>");
-    col.addClass("col-md-4");
+    col.addClass("col-md-6");
 
     var card = $("<div></div>");
     card.addClass("article-card");

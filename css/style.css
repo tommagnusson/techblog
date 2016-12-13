@@ -69,6 +69,8 @@ a:visited {
   color: white;
 }
 
+/* ========== Decks and Cards ========== */
+
 /* Spacing for article cards */
 .article-decks {
   margin-top: 30px;
@@ -109,4 +111,29 @@ a:visited {
 }
 .card-content a:hover {
   text-decoration: none;
+}
+
+/* ========== Side Nav ========== */
+
+.useful-links {
+  margin-top: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+.link-card {
+  transition: 0.3s;
+  border-bottom: 1px solid;
+  border-color: var(--color-gray-light);
+}
+.link-card:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.link-card a {
+  transition: 0.3s;
+}
+
+.link-card a:hover {
+  color: black;
 }
