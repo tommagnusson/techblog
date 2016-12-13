@@ -75,7 +75,9 @@ function placeDecks(teasers, section) {
       deckElement.addClass("row");
       deckElement.addClass("deck-row");
 
-      deckElement.append(currentDeck.map(c => { return c.makeCard(); })) // connect the deck with the row
+      let currentDeckElements = currentDeck.map(c => c.makeCard());
+
+      deckElement.append(currentDeckElements) // connect the deck with the row
       deckSpot.append(deckElement); // connect the deck with the spot
       currentDeck = []; // evacuate currentDeck
     }
@@ -133,5 +135,23 @@ $(() => {
   });
 
   placeDecks([platoTeaser], ".philosophy-container");
+
+  let bunnyTeaser = new ArticleTeaser({
+    title: "Hip Hop Will Never Be the Same...",
+    teaserText: "What do you call a bunny in a kilt?...",
+    imgUrl: "./img/bunny.jpg",
+    imgAlt: "bunny",
+    articleLink: "#"
+  });
+
+  let deerTeaser = new ArticleTeaser({
+    title: "Oh Deer",
+    teaserText: "What do deer use for currency?",
+    imgUrl: "./img/deer.jpg",
+    imgAlt: "deer",
+    articleLink: "#"
+  });
+
+  placeDecks([bunnyTeaser, deerTeaser], ".misc-container");
 
 });
