@@ -18,7 +18,8 @@ class ArticleTeaser {
     this.articleLink = articleTeaserInfo.articleLink;
   }
 
-  /** Returns and html element representing a card */
+  /** Returns and html element representing a card.
+      Contains an image, title and teaser text for the card. */
   makeCard() {
 
     // create all the elements with jQuery
