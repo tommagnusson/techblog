@@ -139,6 +139,13 @@ a:visited {
   font-size: 14px;
 }
 
+.blog-footer p {
+  color: #b2d6ff; /* Grayed blue */
+  font-size: 14px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
 .blog-footer-links {
   list-style: none;
   padding-left: 0px;
