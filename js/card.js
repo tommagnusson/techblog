@@ -59,13 +59,12 @@ class ArticleTeaser {
 
 }
 
-// TODO: Somehow not displaying the actual decks... debug more
-
 function placeDecks(teasers, section) {
   // place for the decks
   let deckSpot = $(section).find(".article-decks");
   var currentDeck = []; // holds the current deck of cards (two for now)
 
+  // lay out decks on the page dynamically (kind of like brick laying)
   for(let i = 0; i < teasers.length; i++) {
     currentDeck.push(teasers[i]);
 
@@ -91,6 +90,14 @@ $(() => {
 
   // In the future this would contain a web call to retreive a bunch of teasers,
   // then load those teasers onto the page dynamically using these objects
+
+  let buildingWebsite = new ArticleTeaser({
+    title: "Building my First Website",
+    teaserText: "Building this website has been a blast, but here are some challenges I faced...",
+    imgUrl: "./img/coding.jpg",
+    imgAlt: "coding my first website",
+    articleLink: "./pages/first_website.html"
+  })
 
   let macbookTeaser = new ArticleTeaser({
     title: "How Macbooks Came to Be",
@@ -124,7 +131,7 @@ $(() => {
     articleLink: "#"
   });
 
-  let teasers = [macbookTeaser, urbanizationTeaser, watchMania, droneZone];
+  let teasers = [buildingWebsite, macbookTeaser, urbanizationTeaser, watchMania, droneZone];
   placeDecks(teasers, ".tech-container");
 
   let platoTeaser = new ArticleTeaser({

@@ -38,6 +38,14 @@ body {
   font-size: 24px;
 }
 
+.content h1 {
+  margin-bottom: 30px;
+}
+
+.content section {
+  margin-bottom: 50px;
+}
+
 
 /* Probably only going to use down to h3 */
 h1, h2, h3 {
@@ -170,4 +178,14 @@ a:visited {
 .blog-footer-links li {
   display: inline;
   margin: 10px 10px 10px 10px;
+}
+
+/* ========== Article ========== */
+.head-img {
+  /* Darken the image*/
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../img/coding.jpg);
+}
+
+.head-img .detail-text {
+  color: #d0ced8; /* Gray, slightly blue */
 }

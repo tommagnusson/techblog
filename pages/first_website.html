@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta stuff needed for mobile compatibility -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS for Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Local Site Wide Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+  </head>
+
+  <body>
+
+    <!-- Start Nav Bar
+         Static Nav Bar at the top -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Header contains the link to the main page -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html">techBlog</a>
+        </div>
+        <!-- Collapses on mobile into a nice hamburger menu -->
+        <div id="navbar" class="navbar-collapse collapse in">
+
+          <!-- Right nav bar elements -->
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">About Me</a>
+            </li>
+          </ul>
+
+        </div> <!-- End id navbar -->
+      </div> <!-- End navbar container wrapper -->
+    </nav>
+    <!-- End Nav Bar -->
+
+    <div class="jumbotron gradient-blue head-img">
+      <div class="container">
+        <div class="row">
+          <h1>The First Website</h1>
+          <p class="detail-text">Trials, tribulations and lots and lots of googling.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 content">
+          <section>
+            <h1>Building Blocks</h1>
+            <p>Building this website has been the best assignment of this class, not only because of how it forced us to pull in skills we have been whetting for the last ten weeks, but because we could express ourselves through a new medium. Man shares such a special faculty with God: the ability to create. Expression is both a "high" and "low" form of life, and learning web development is another weapon in our arsenal of communication.</p>
+
+            <p>Despite being a platform for “higher forms” of life, it was a definite challenge. Making it look appealing, planning the layouts, deciding which frameworks to use, and simply pushing through the tough challenges all bestowed skills not present in a traditional “worksheet” or “homework assignment.”</p>
+          </section>
+
+          <section>
+            <h1>What the Heck to Use?</h1>
+            <p>I’m subscribed to the <a href="https://www.reddit.com/r/webdev">/r/webdev subreddit</a>, which posts links about HTML, CSS, Javascript and web development in general. It is an excellent resource to browse when attempting to navigate the murky waters of the web development sea. <a href="https://git-scm.com/downloads">Git</a> and <a href="https://www.github.com">Github</a> are two great tools to manager version control and code from the cloud. I used <a href="http://getbootstrap.com/">Bootstrap</a> to style the CSS and make sure all of the columns were nice and dynamic. I used a combination of plain Javascript and a fundamental library called <a href="https://jquery.com/">jQuery</a>, which is shorthand for common DOM manipulations. I really enjoyed using jQuery, especially in combination for creating the cards for my article teasers.</p>
+          </section>
+
+          <section>
+            <h1>Most Difficult Moment</h1>
+            <p>Creating the cards for my articles in a dynamic was the portion of the website I fiddled with the most. I took inspiration from a tutorial on <a href="http://www.w3schools.com/">W3 School</a>, which teaches readers <a href="http://www.w3schools.com/howto/howto_css_cards.asp">how to create a simple card</a> with a drop shadow that increases after an <code>onhover</code> event fires.</p>
+
+            <p>My approach was to generalize those cards across the website, so I could reuse the same CSS styles and have a coherent, intuitive card theme. Readers who understand the behavior of one card will implicitly understand future behaviors other cards, even if the content within them is disparate. This is a simple User Experience (UX) principle I attempt to use for future content on the site. The only two examples I have right now are: the card and the links. I don’t actually have the exact same CSS for both, so the onhover styles are slightly different, but in future iterations of the website I’ll change it. Here is a sample of the CSS for the cards:</p>
+
+            <pre>
+              <code>
+                .article-card {
+                  color: var(--color-gray-dark);
+                  /* Add shadows to create the "card" effect */
+                  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                  transition: 0.3s;
+                  background-color: white;
+                }
+
+                .article-card:hover {
+                  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                }
+
+                /* Padding for the card's content */
+                .article-card .card-content {
+                  padding: 10px 20px 40px 20px;
+                }
+
+                .article-card img {
+                  object-fit: cover;
+                  overflow: hidden;
+                }
+
+                .card-content h1 {
+                  margin-bottom: 10px;
+                  font-size: 24px;
+                }
+                .card-content a:hover {
+                  text-decoration: none;
+                }
+              </code>
+            </pre>
+
+            <p>I like this card theme. I think it take a nod at <a href="https://material.io/guidelines/material-design/introduction.html">Google's Material Design</a>. It was a challenge to manage the <code>onhover</code> events for the different cards, but I'll manage in the future to make it more coherent.</p>
+          </section>
+          <section>
+            <h1>Planning for the Future</h1>
+            <p>I deliberately spend most of my time learning the building blocks of the different frameworks and libraries that I need to know to build nice-looking websites. Sure, for the project as a whole I have a measley three pages, but I have cashed in the initial time investment learning the fundamentals of some pretty prominent and popular libraries.</p>
+
+            <p>My most worthwhile endeavor was dynamically adding article teaser cards from Javascript onto the page using object oriented programming paradigms (<code>ArticleTeaser</code> class) as well as jQuery, which makes it a pleasure to query and create html elements on the DOM.</p>
+
+            <p>My <code>ArticleTeaser</code> class:</p>
+            <pre>
+              <code>
+                // for named label parameters, following google maps api
+                // design patters (I think)
+                //class ArticleTeaserInfo {
+                //  title, teaserText, imgUrl, imgAlt, articleLink
+                //}
+
+                /** Represents a Teaser for an Article (info used for the card) */
+                class ArticleTeaser {
+
+                  constructor(articleTeaserInfo) {
+
+                    this.title = articleTeaserInfo.title;
+                    this.teaserText = articleTeaserInfo.teaserText;
+                    this.imgUrl = articleTeaserInfo.imgUrl;
+                    this.imgAlt = articleTeaserInfo.imgAlt;
+                    this.articleLink = articleTeaserInfo.articleLink;
+                  }
+
+                  /** Returns and html element representing a card.
+                      Contains an image, title and teaser text for the card. */
+                  makeCard() { ... }
+                }
+              </code>
+            </pre>
+
+            <p>My object-oriented style makes it really easy for me to set up a server with dynamic articles in the future and have the card.js load whatever articles I serve up whenever I feel like changing them. I don't have to hand-craft each article page, or each teaser because I can just create a few Javascript objects and have a nice format to send to clients accessing my website.</p>
+
+            <p>Look how dynamic this is:</p>
+            <pre>
+              <code>
+                $(() => {
+
+                  // In the future this would contain a web call to retreive a bunch of teasers,
+                  // then load those teasers onto the page dynamically using these objects
+
+                  let buildingWebsite = new ArticleTeaser({
+                    title: "Building my First Website",
+                    teaserText: "Building this website has been a blast, but here are some challenges I faced...",
+                    imgUrl: "./img/coding.jpg",
+                    imgAlt: "coding my first website",
+                    articleLink: "./pages/first_website.html"
+                  })
+
+                  //... function to add an array of ArticleTeasers onto the page
+                  placeDecks([buildingWebsites], ".tech-container");
+                }
+              </code>
+            </pre>
+            <p> This is my most proud accomplishment, and the portion of the website which took me the most time to figure out, especially with all the combinations of frameworks to explore.</p>
+          </section>
+          <section>
+            <h1>Final Thoughts</h1>
+            <p>This class was honestly a little too basic for me, and the cirriculum felt like it stifled me from learning at the rate I need to in order to secure a good job or attain a wide skill-set. It's not necessarily the fault of the class itself, I just wish there existed a course for "advanced beginners," meaning people who have experience coding, but not necessarily in web development.</p>
+            <p>The most learning I accomplished was in the last module about the Google Maps API, which got our feet wet in a world we need to be submerged in. That experience was second only to building the website, which actually was less "taught" and more "self-taught," in the sense that I learned Bootstrap, jQuery, git, Github and all those other frameworks entirely on my own, even though they are industry standards.</p>
+            <p>I also would have liked to learn an actual framework like React, Angular or Ember, which I hear about all the time in professional web developer talks. I feel like I am ready to explore Javascript through the professional lense, which focuses on solving pragmatic problems to make the developer life easier, rather than simply the possibility of displaying something on the page.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <footer class="blog-footer">
+      <div class="container">
+        <ul class="blog-footer-links">
+          <li><a href="https://github.com/tommagnusson">Github</a></li>
+          <li><a href="http://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://jquery.com/">jQuery (JS)</a></li>
+        </ul>
+        <p>
+          A website for Intro to Programming, made by Tommy Magnusson.
+        </p>
+        <p>
+          Education provided by <a href="http://www.marist.edu">Marist College</a>.
+        </p>
+        <p>
+          All photos are downloaded from <a href="https://unsplash.com">Unsplash</a>.
+        </p>
+        <p>
+          Made with love
+          (and <a href="http://getbootstrap.com/">Bootstrap</a>
+          and <a href="https://jquery.com/">jQuery</a>).
+        </p>
+      </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- Helps with the card insertion -->
+    <script src="./js/card.js"></script>
+
+  </body>
+
+</html>
